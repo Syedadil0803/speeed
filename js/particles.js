@@ -114,7 +114,8 @@ class ParticleCanvas {
     }
   }
   
-// Initialize the particle canvas after everything (DOM + images) is fully loaded
-  window.addEventListener('load', () => {
-    new ParticleCanvas();
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      new ParticleCanvas();
+    }, 3000); // delay 3 seconds
   });
