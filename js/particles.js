@@ -122,6 +122,6 @@ class ParticleCanvas {
       loader.style.opacity = '0';
       loader.style.pointerEvents = 'none';
       setTimeout(() => loader.style.display = 'none', 500);
-    }, 2000); // delay 2 seconds
+    }, 1000); // delay 2 seconds
   });
   
