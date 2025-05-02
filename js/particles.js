@@ -114,7 +114,7 @@ class ParticleCanvas {
     }
   }
   
-  // Initialize the particle canvas when the page loads
-  window.addEventListener('DOMContentLoaded', () => {
+// Initialize the particle canvas after everything (DOM + images) is fully loaded
+  window.addEventListener('load', () => {
     new ParticleCanvas();
   });
