@@ -113,9 +113,15 @@ class ParticleCanvas {
       }
     }
   }
-  
   window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       new ParticleCanvas();
-    }, 3000); // delay 3 seconds
+  
+      // hide loader AFTER canvas is initialized
+      const loader = document.getElementById('loader');
+      loader.style.opacity = '0';
+      loader.style.pointerEvents = 'none';
+      setTimeout(() => loader.style.display = 'none', 500);
+    }, 2000); // delay 2 seconds
   });
+  
